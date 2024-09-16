@@ -86,7 +86,12 @@ namespace FlowControl
 
         private static int GetTicketPrice(int age)
         {
-            if (age < 20)
+            if (age < 5 || age > 100)
+            {
+                Console.WriteLine("You get free entrance");
+                return 0;
+            }
+            else if (age < 20)
             {
                 Console.WriteLine("Youth price: 80kr");
                 return 80;
